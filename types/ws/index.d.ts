@@ -312,7 +312,7 @@ declare namespace WebSocket {
             upgradeHead: Buffer,
             callback: (client: WebSocket, request: IncomingMessage) => void,
         ): void;
-        shouldHandle(request: IncomingMessage): boolean | Promise<boolean>;
+        shouldHandle(request: IncomingMessage): boolean;
 
         // Events
         on(event: "connection", cb: (this: Server, socket: WebSocket, request: IncomingMessage) => void): this;
